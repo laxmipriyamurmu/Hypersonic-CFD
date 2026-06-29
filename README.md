@@ -2,52 +2,52 @@
 
 ## Project Overview
 
-This project investigates the aerodynamic and aerothermal performance of three hypersonic vehicle configurations operating at **Mach 5** and **Mach 7** using **ANSYS Fluent 2024 R1**.
+This project presents a three-dimensional Computational Fluid Dynamics (CFD) analysis of hypersonic vehicle configurations operating at **Mach 5** and **Mach 7** using **ANSYS Fluent 2024 R1**.
 
-The study focuses on understanding how different nose geometries influence shock-wave formation, aerodynamic drag, pressure distribution, temperature rise, and overall aerodynamic efficiency in hypersonic flight.
+The study investigates the influence of nose geometry on aerodynamic performance by evaluating shock-wave formation, pressure distribution, temperature rise, density variation, and drag characteristics under hypersonic flight conditions. Three different nose configurations were analysed to determine their aerodynamic efficiency and flow behaviour.
 
 ---
 
-# Objectives
+## Objectives
 
 * Investigate hypersonic flow characteristics around different vehicle geometries.
 * Compare aerodynamic performance at Mach 5 and Mach 7.
-* Analyze shock-wave formation and stand-off distance.
-* Evaluate pressure and temperature distributions.
-* Study the influence of nose geometry on drag reduction and aerodynamic efficiency.
+* Analyze shock-wave formation and shock stand-off distance.
+* Evaluate pressure, temperature, and density distributions.
+* Assess the influence of nose geometry on aerodynamic drag and overall performance.
 
 ---
 
-# Vehicle Configurations
+## Vehicle Configurations
 
-Three different nose configurations were analyzed.
+Three hypersonic vehicle models were developed and analysed.
 
-| Model   | Configuration                           |
-| ------- | --------------------------------------- |
-| Model 1 | Flat / Blunt Nose (NASA X-43A Inspired) |
-| Model 2 | Moderate Conical Nose                   |
-| Model 3 | Elongated Sharp Conical Nose            |
+| Model       | Configuration                           |
+| :---------- | :-------------------------------------- |
+| **Model 1** | Flat / Blunt Nose (NASA X-43A Inspired) |
+| **Model 2** | Moderate Conical Nose                   |
+| **Model 3** | Elongated Sharp Conical Nose            |
 
-### CAD Models
+### Vehicle Models
 
-| Model 1            | Model 2            | Model 3            |
-| ------------------ | ------------------ | ------------------ |
+|       Model 1      |       Model 2      |       Model 3      |
+| :----------------: | :----------------: | :----------------: |
 | ![](images/h4.png) | ![](images/h5.png) | ![](images/h6.png) |
 
 ---
 
-# CFD Methodology
+## CFD Methodology
 
-### Workflow
+The numerical analysis followed a standard CFD workflow.
 
 ![](images/h7.png)
 
-The numerical analysis followed these steps:
+### Workflow
 
-1. Geometry Creation
+1. Geometry Development
 2. Computational Domain Generation
 3. Mesh Generation
-4. Solver Setup
+4. Solver Configuration
 5. Numerical Simulation
 6. Convergence Assessment
 7. Post Processing
@@ -55,22 +55,23 @@ The numerical analysis followed these steps:
 
 ---
 
-# Simulation Parameters
+## Simulation Parameters
 
-| Parameter        | Value                              |
-| ---------------- | ---------------------------------- |
-| Software         | ANSYS Fluent 2024 R1               |
-| Solver           | Density-Based Implicit             |
-| Turbulence Model | SST k-ω                            |
-| Working Fluid    | Air (Ideal Gas)                    |
-| Mach Numbers     | Mach 5 & Mach 7                    |
-| Analysis Type    | Three-Dimensional Steady-State CFD |
+| Parameter        | Specification                  |
+| ---------------- | ------------------------------ |
+| Software         | ANSYS Fluent 2024 R1           |
+| Solver           | Density-Based Implicit         |
+| Turbulence Model | SST k-ω                        |
+| Working Fluid    | Air (Ideal Gas)                |
+| Flow Regime      | Compressible Hypersonic Flow   |
+| Analysis Type    | Three-Dimensional Steady-State |
+| Mach Numbers     | 5 & 7                          |
 
 ---
 
-# Mesh Generation
+## Mesh Generation
 
-A high-quality unstructured computational mesh was developed for accurate prediction of shock structures and boundary layer effects.
+A high-quality unstructured computational mesh was generated to accurately capture shock-wave structures and boundary layer effects.
 
 ### Computational Mesh
 
@@ -81,6 +82,8 @@ A high-quality unstructured computational mesh was developed for accurate predic
 * Approximately **4.14 Million Cells**
 * Approximately **8.41 Million Faces**
 * Approximately **756,000 Nodes**
+* Local mesh refinement near the vehicle surface
+* Mesh quality verification through orthogonal quality assessment
 
 ### Mesh Quality
 
@@ -88,9 +91,9 @@ A high-quality unstructured computational mesh was developed for accurate predic
 
 ---
 
-# Engineering Analysis
+## Engineering Analysis
 
-The simulations investigated:
+The CFD simulations evaluated:
 
 * Shock-wave structures
 * Pressure distribution
@@ -99,32 +102,31 @@ The simulations investigated:
 * Drag coefficient
 * Lift coefficient
 * Aerothermal characteristics
-* Flow-field behavior
+* Flow-field behaviour
 
 ---
 
-# Results
+## Results
 
 ### Drag Coefficient Convergence
 
 ![](images/h1.png)
 
-### Comparative Configuration Summary
+### Comparative Vehicle Analysis
 
 ![](images/h3.png)
 
 ### Key Findings
 
-* Flat/blunt nose produced a detached bow shock.
-* Shock stand-off distance decreased with increasing nose sharpness.
-* Sharp conical configuration generated lower aerodynamic drag.
-* Elongated conical geometry demonstrated the highest aerodynamic efficiency.
-* Pressure and temperature concentrations increased near sharper nose tips.
-* Nose geometry significantly influences hypersonic aerodynamic performance.
+* The blunt nose configuration generated a strong detached bow shock.
+* Increasing nose sharpness reduced shock stand-off distance.
+* The elongated conical configuration produced the lowest aerodynamic drag.
+* Surface pressure and temperature increased significantly near the stagnation region.
+* Nose geometry strongly influenced aerodynamic efficiency under hypersonic conditions.
 
 ---
 
-# Software & Tools
+## Software & Engineering Tools
 
 * ANSYS Fluent 2024 R1
 * ANSYS Meshing
@@ -133,67 +135,41 @@ The simulations investigated:
 
 ---
 
-# Skills Demonstrated
+## Skills Demonstrated
 
 * Computational Fluid Dynamics (CFD)
-* Compressible Flow Analysis
 * Hypersonic Aerodynamics
+* Compressible Flow Analysis
 * Numerical Simulation
 * Mesh Generation
 * Aerodynamic Performance Analysis
 * Engineering Research
-* Scientific Documentation
+* Technical Documentation
 
 ---
 
-# Repository Structure
+## 📄 Technical Report
 
-```text
-Hypersonic-CFD
-│
-├── images
-│   ├── h1.png
-│   ├── h2.png
-│   ├── h3.png
-│   ├── h4.png
-│   ├── h5.png
-│   ├── h6.png
-│   ├── h7.png
-│   └── h8.png
-│
-├── report
-│   └── Hypersonic_CFD_Report.pdf
-│
-├── results
-│
-└── README.md
-```
+The complete project report is available in this repository.
+
+📥 **Download the report here**
+
+**[Hypersonic CFD Technical Report](report/hypersonic-cfd-report.pdf)**
 
 ---
 
-# Technical Report
-
-📄 The complete project report is available in the **report** directory.
-
-> **Download:**
-> `[Hypersonic_CFD_Report.pdf](report/Hypersonic_CFD_Report.pdf)`
-
-> **Note:** Replace `Hypersonic_CFD_Report.pdf` with the exact filename of your PDF if it is different.
-
----
-
-# Future Work
+## Future Scope
 
 * Grid independence study
 * Turbulence model comparison
-* Thermal Protection System (TPS) analysis
-* Optimization of hypersonic vehicle geometry
-* Transient CFD simulations
+* Thermal Protection System (TPS) evaluation
+* Geometry optimisation for drag reduction
+* High-temperature material analysis
 * Higher Mach number investigations
 
 ---
 
-# Authors
+## Contributors
 
 * **Laxmipriya Murmu**
 * Gowtham Kumar Talla
@@ -201,12 +177,12 @@ Hypersonic-CFD
 * Mounish Damera
 * Jitesh Jambulkar
 
-### Faculty Guide
+### Faculty Mentor
 
 **Dr. Rahul Kumar**
 
 ---
 
-## License
-
-This repository is intended for academic, educational, and research purposes.
+> **Academic Project**
+> Department of Aerospace Engineering
+> Lovely Professional University
