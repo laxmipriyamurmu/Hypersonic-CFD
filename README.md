@@ -1,95 +1,130 @@
-# Aerodynamic Performance Analysis of Hypersonic Vehicles Using Computational Fluid Dynamics
+# 🚀 Aerodynamic Performance Analysis of Hypersonic Vehicles Using Computational Fluid Dynamics
 
 ## Project Overview
 
-This project presents a Computational Fluid Dynamics (CFD) investigation of three hypersonic vehicle configurations operating at **Mach 5** and **Mach 7** using **ANSYS Fluent 2024 R1**.
+This project investigates the aerodynamic and aerothermal performance of three hypersonic vehicle configurations operating at **Mach 5** and **Mach 7** using **ANSYS Fluent 2024 R1**.
 
-The objective was to evaluate the influence of nose geometry on aerodynamic performance by analyzing shock-wave behavior, pressure distribution, temperature rise, drag characteristics, and overall aerodynamic efficiency under hypersonic flow conditions.
+The study focuses on understanding how different nose geometries influence shock-wave formation, aerodynamic drag, pressure distribution, temperature rise, and overall aerodynamic efficiency in hypersonic flight.
 
 ---
 
-## Objectives
+# Objectives
 
-* Analyze hypersonic flow behavior around different vehicle geometries.
-* Investigate detached and attached shock-wave formation.
+* Investigate hypersonic flow characteristics around different vehicle geometries.
 * Compare aerodynamic performance at Mach 5 and Mach 7.
-* Evaluate pressure and temperature distributions over the vehicle surface.
-* Study the influence of nose geometry on drag characteristics and aerodynamic efficiency.
+* Analyze shock-wave formation and stand-off distance.
+* Evaluate pressure and temperature distributions.
+* Study the influence of nose geometry on drag reduction and aerodynamic efficiency.
 
 ---
 
-## Vehicle Configurations
+# Vehicle Configurations
 
-Three hypersonic configurations were investigated:
+Three different nose configurations were analyzed.
 
-| Model   | Nose Configuration                      |
+| Model   | Configuration                           |
 | ------- | --------------------------------------- |
 | Model 1 | Flat / Blunt Nose (NASA X-43A Inspired) |
 | Model 2 | Moderate Conical Nose                   |
 | Model 3 | Elongated Sharp Conical Nose            |
 
+### CAD Models
+
+| Model 1            | Model 2            | Model 3            |
+| ------------------ | ------------------ | ------------------ |
+| ![](images/h4.png) | ![](images/h5.png) | ![](images/h6.png) |
+
 ---
 
-## Simulation Methodology
+# CFD Methodology
 
-### CFD Software
+### Workflow
 
-* ANSYS Fluent 2024 R1
+![](images/h7.png)
 
-### Flow Conditions
+The numerical analysis followed these steps:
+
+1. Geometry Creation
+2. Computational Domain Generation
+3. Mesh Generation
+4. Solver Setup
+5. Numerical Simulation
+6. Convergence Assessment
+7. Post Processing
+8. Comparative Performance Analysis
+
+---
+
+# Simulation Parameters
 
 | Parameter        | Value                              |
 | ---------------- | ---------------------------------- |
-| Flow Regime      | Compressible Hypersonic Flow       |
-| Mach Numbers     | 5 and 7                            |
+| Software         | ANSYS Fluent 2024 R1               |
 | Solver           | Density-Based Implicit             |
 | Turbulence Model | SST k-ω                            |
 | Working Fluid    | Air (Ideal Gas)                    |
+| Mach Numbers     | Mach 5 & Mach 7                    |
 | Analysis Type    | Three-Dimensional Steady-State CFD |
 
 ---
 
-## Mesh Generation
+# Mesh Generation
 
-A high-quality computational mesh was generated for each configuration to accurately capture hypersonic shock structures and boundary layer effects.
+A high-quality unstructured computational mesh was developed for accurate prediction of shock structures and boundary layer effects.
 
-### Mesh Characteristics
+### Computational Mesh
+
+![](images/h8.png)
+
+### Mesh Statistics
 
 * Approximately **4.14 Million Cells**
 * Approximately **8.41 Million Faces**
 * Approximately **756,000 Nodes**
-* Orthogonal Quality Assessment
-* Local mesh refinement near the vehicle surface
+
+### Mesh Quality
+
+![](images/h2.png)
 
 ---
 
-## Engineering Analysis
+# Engineering Analysis
 
-The simulations evaluated:
+The simulations investigated:
 
 * Shock-wave structures
 * Pressure distribution
 * Temperature distribution
 * Density variation
-* Lift coefficient
 * Drag coefficient
-* Aerothermal behavior
-* Flow-field characteristics
+* Lift coefficient
+* Aerothermal characteristics
+* Flow-field behavior
 
 ---
 
-## Key Contributions
+# Results
 
-* Developed three-dimensional hypersonic vehicle geometries.
-* Generated high-quality computational meshes for CFD analysis.
-* Performed numerical simulations at Mach 5 and Mach 7.
-* Evaluated aerodynamic forces and pressure distributions.
-* Compared the influence of nose geometry on aerodynamic performance.
-* Investigated aerothermal characteristics under hypersonic flight conditions.
+### Drag Coefficient Convergence
+
+![](images/h1.png)
+
+### Comparative Configuration Summary
+
+![](images/h3.png)
+
+### Key Findings
+
+* Flat/blunt nose produced a detached bow shock.
+* Shock stand-off distance decreased with increasing nose sharpness.
+* Sharp conical configuration generated lower aerodynamic drag.
+* Elongated conical geometry demonstrated the highest aerodynamic efficiency.
+* Pressure and temperature concentrations increased near sharper nose tips.
+* Nose geometry significantly influences hypersonic aerodynamic performance.
 
 ---
 
-## Software & Tools
+# Software & Tools
 
 * ANSYS Fluent 2024 R1
 * ANSYS Meshing
@@ -98,65 +133,80 @@ The simulations evaluated:
 
 ---
 
-## Results
-
-The study demonstrated:
-
-* Accurate prediction of hypersonic flow behavior.
-* Visualization of detached and attached shock waves.
-* Comparative evaluation of three nose geometries.
-* Reduction in aerodynamic drag with sharper nose configurations.
-* Higher aerodynamic efficiency for elongated conical designs.
-* Significant influence of nose geometry on pressure and temperature distributions.
-
----
-
-## Skills Demonstrated
+# Skills Demonstrated
 
 * Computational Fluid Dynamics (CFD)
-* Hypersonic Aerodynamics
 * Compressible Flow Analysis
+* Hypersonic Aerodynamics
 * Numerical Simulation
 * Mesh Generation
 * Aerodynamic Performance Analysis
-* Flow Visualization
 * Engineering Research
+* Scientific Documentation
 
 ---
 
-## Future Work
-
-* Grid independence studies
-* Comparison of turbulence models
-* Thermal protection system (TPS) analysis
-* High-temperature material evaluation
-* Transient hypersonic simulations
-* Optimization of vehicle geometry
-
----
-
-## Repository Structure
+# Repository Structure
 
 ```text
 Hypersonic-CFD
 │
-├── images/        # CAD models, mesh, plots and figures
-├── report/        # Complete project report
-├── results/       # CFD outputs and analysis
+├── images
+│   ├── h1.png
+│   ├── h2.png
+│   ├── h3.png
+│   ├── h4.png
+│   ├── h5.png
+│   ├── h6.png
+│   ├── h7.png
+│   └── h8.png
+│
+├── report
+│   └── Hypersonic_CFD_Report.pdf
+│
+├── results
+│
 └── README.md
 ```
 
 ---
 
-## Author
+# Technical Report
 
-**Laxmipriya Murmu**
+📄 The complete project report is available in the **report** directory.
 
-B.Tech Aerospace Engineering
-Lovely Professional University
+> **Download:**
+> `[Hypersonic_CFD_Report.pdf](report/Hypersonic_CFD_Report.pdf)`
+
+> **Note:** Replace `Hypersonic_CFD_Report.pdf` with the exact filename of your PDF if it is different.
 
 ---
 
-## Acknowledgements
+# Future Work
 
-This project was carried out as part of the B.Tech Aerospace Engineering curriculum under the guidance of **Dr. Rahul Kumar**.
+* Grid independence study
+* Turbulence model comparison
+* Thermal Protection System (TPS) analysis
+* Optimization of hypersonic vehicle geometry
+* Transient CFD simulations
+* Higher Mach number investigations
+
+---
+
+# Authors
+
+* **Laxmipriya Murmu**
+* Gowtham Kumar Talla
+* Shaikh Mohd Zafar Iqbal Jawaid Ashraf
+* Mounish Damera
+* Jitesh Jambulkar
+
+### Faculty Guide
+
+**Dr. Rahul Kumar**
+
+---
+
+## License
+
+This repository is intended for academic, educational, and research purposes.
